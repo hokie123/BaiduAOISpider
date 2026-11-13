@@ -140,7 +140,7 @@ POI csv 读取 → 每个 POI 信息拼接 url → 一个 url 返回一组 json 
   
     ```bash
     # 或者直接手动下载
-    git clone git@github.com:Prufrok/BaiduAOISpider.git
+    git clone https://github.com/hokie123/BaiduAOISpider.git
     ```
 
 * 安装环境（基于 anaconda）
@@ -151,6 +151,10 @@ POI csv 读取 → 每个 POI 信息拼接 url → 一个 url 返回一组 json 
 
     # 激活新环境
     conda activate BaiduAOISpider
+
+    # 在仓库根目录验证 HTTPS 下载器和爬虫入口
+    python -c "from scrapy.core.downloader.handlers.http11 import HTTP11DownloadHandler"
+    scrapy list
     ```
 
 * 阅读[配置说明](#配置说明)，按照实际需求修改 `settings.py`
